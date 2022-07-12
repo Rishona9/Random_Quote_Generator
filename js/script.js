@@ -56,14 +56,19 @@ let quotes = [
  * `getRandomQuote` function
  ***/
 function getRandomQuote() {
-  let randomNumber = Math.floor(Math.random() * 7);
+  let randomNumber = Math.floor(Math.random() * quotes.length);
   return quotes[randomNumber];
 }
 
 /***
  * `printQuote` function
  ***/
-
+function printQuote() {
+  let randomQuote = getRandomQuote();
+  let html = `<p class="quote">${quotes.quote}</p><p class="source">${quotes.source}<span class="citation">${quotes.citation}</span>
+  <span class="year">${quotes.year}</span></p>`;
+  return (document.getElementById("quote-box").innerHTML = html);
+}
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
