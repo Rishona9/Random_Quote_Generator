@@ -104,8 +104,9 @@ function getRandomColor() {
  ***/
 function changeBackgroundColor() {
   let newBackgroundColor = changeBackgroundColor();
-  return document.getElementById("body").innerHTML;
+  return (document.body.style.background-color = newBackgroundColor);
 }
+
 /***
  * click event listener for the print quote button
  ***/
