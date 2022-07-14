@@ -65,12 +65,12 @@ function getRandomQuote() {
  ***/
 function printQuote() {
   let randomQuote = getRandomQuote();
-  let html = `<p class="quote">${quotes.quote}</p><p class="source">${quotes.source}`;
-  if (quotes.citation !== undefined) {
-    html += `<span class="citation">${quotes.citation}</span>`;
+  let html = `<p class="quote">${randomQuote.quote}</p><p class="source">${randomQuote.source}`;
+  if (randomQuote.citation !== undefined) {
+    html += `<span class="citation">${randomQuote.citation}</span>`;
   }
-  if (quotes.year !== undefined) {
-    html += `<span class="year">${quotes.year}</span>`;
+  if (randomQuote.year !== undefined) {
+    html += `<span class="year">${randomQuote.year}</span>`;
   }
   return (document.getElementById("quote-box").innerHTML = html);
 }
