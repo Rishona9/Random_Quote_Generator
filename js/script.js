@@ -65,8 +65,13 @@ function getRandomQuote() {
  ***/
 function printQuote() {
   let randomQuote = getRandomQuote();
-  let html = `<p class="quote">${quotes.quote}</p><p class="source">${quotes.source}<span class="citation">${quotes.citation}</span>
-  <span class="year">${quotes.year}</span></p>`;
+  let html = `<p class="quote">${quotes.quote}</p><p class="source">${quotes.source}`;
+  if (quotes.citation !== undefined) {
+    html += `<span class="citation">${quotes.citation}</span>`;
+  }
+  if (quotes.year !== undefined) {
+    html += `<span class="year">${quotes.year}</span>`;
+  }
   return (document.getElementById("quote-box").innerHTML = html);
 }
 /***
@@ -74,6 +79,6 @@ function printQuote() {
  * DO NOT CHANGE THE CODE BELOW!!
  ***/
 
-//document
-//.getElementById("load-quote")
-//.addEventListener("click", printQuote, false);
+document
+  .getElementById("load-quote")
+  .addEventListener("click", printQuote, false);
