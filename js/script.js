@@ -74,7 +74,7 @@ function getRandomQuote() {
 }
 
 /***
- * `printQuote` function to access properties in each object of array and display quote
+ * `printQuote` function to access properties in each object of array and display quote and change background color
  ***/
 function printQuote() {
   let randomQuote = getRandomQuote();
@@ -88,7 +88,9 @@ function printQuote() {
   if (randomQuote.tags !== undefined) {
     html += `<span class="tags">${randomQuote.tags}</span>`;
   }
-  return (document.getElementById("quote-box").innerHTML = html);
+
+  document.getElementById("quote-box").innerHTML = html;
+  changeBackgroundColor();
 }
 
 /***
@@ -104,9 +106,9 @@ function getRandomColor() {
  ***/
 function changeBackgroundColor() {
   let newBackgroundColor = getRandomColor();
-  return newBackgroundColor;
+  document.body.style.backgroundColor = newBackgroundColor;
 }
-document.body.style.backgroundColor = changeBackgroundColor();
+
 /***
  * click event listener for the print quote button
  ***/
@@ -115,6 +117,4 @@ document
   .getElementById("load-quote")
   .addEventListener("click", printQuote, false);
 
-document
-  .getElementById("body")
-  .addEventListener("click", changeBackgroundColor, false);
+document.body.addEventListener("click", changeBackgroundColor, false);
