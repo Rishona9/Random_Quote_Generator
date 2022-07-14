@@ -61,7 +61,7 @@ let quotes = [
     source: "Patrick McKenzie",
     citation: "Twitter",
     year: 2016,
-    tags: "problem solving #tech",
+    tags: "#problem solving #tech",
   },
 ];
 
@@ -100,13 +100,13 @@ function getRandomColor() {
 }
 
 /***
- * `changeBackgroundColor` function to change background color when new quote is generated
+ * `changeBackgroundColor` function so background color changes to a random color each time the quote refreshes
  ***/
 function changeBackgroundColor() {
-  let newBackgroundColor = changeBackgroundColor();
-  return (document.body.style.background-color = newBackgroundColor);
+  let newBackgroundColor = getRandomColor();
+  return newBackgroundColor;
 }
-
+document.body.style.backgroundColor = changeBackgroundColor();
 /***
  * click event listener for the print quote button
  ***/

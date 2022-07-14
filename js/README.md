@@ -5,3 +5,5 @@ Random Quote Generator Project
 Project used HTML, CSS, and JavaScript to generate a random quote after the user clicks the button
 
 Random quote, including source, citation (if applicable), and year (if applicable) will be displayed
+
+Background color will randomly change after user clicks the button
