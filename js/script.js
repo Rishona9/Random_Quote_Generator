@@ -14,12 +14,14 @@ let quotes = [
   {
     quote: "If it doesn't challenge you, it won't change you.",
     source: "Fred DeVito",
+    tags: "#motivational #fitness",
   },
   {
     quote: "Whatever your mind can conceive and believe, it can achieve.",
     source: "Napoleon Hill",
     citation: "Think and Grow Rich",
     year: 1937,
+    tags: "#motivational #business",
   },
   {
     quote:
@@ -51,6 +53,7 @@ let quotes = [
     quote:
       "Don’t be afraid. Be focused. Be determined. Be hopeful. Be empowered.",
     source: "Michelle Obama",
+    tags: "motivational #strongwomen",
   },
   {
     quote:
@@ -58,6 +61,7 @@ let quotes = [
     source: "Patrick McKenzie",
     citation: "Twitter",
     year: 2016,
+    tags: "problem solving #tech",
   },
 ];
 
@@ -81,7 +85,26 @@ function printQuote() {
   if (randomQuote.year !== undefined) {
     html += `<span class="year">${randomQuote.year}</span>`;
   }
+  if (randomQuote.tags !== undefined) {
+    html += `<span class="tags">${randomQuote.tags}</span>`;
+  }
   return (document.getElementById("quote-box").innerHTML = html);
+}
+
+/***
+ * `getRandomColor` function to generate a random color
+ ***/
+function getRandomColor() {
+  let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  return randomColor;
+}
+
+/***
+ * `changeBackgroundColor` function to change background color when new quote is generated
+ ***/
+function changeBackgroundColor() {
+  let newBackgroundColor = changeBackgroundColor();
+  return document.getElementById("body").innerHTML;
 }
 /***
  * click event listener for the print quote button
@@ -90,3 +113,7 @@ function printQuote() {
 document
   .getElementById("load-quote")
   .addEventListener("click", printQuote, false);
+
+document
+  .getElementById("body")
+  .addEventListener("click", changeBackgroundColor, false);
