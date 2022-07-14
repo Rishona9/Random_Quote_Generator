@@ -26,10 +26,12 @@ let quotes = [
       "“You are braver than you believe, stronger than you seem, and smarter than you think.",
     source: "A.A. Milne",
     citation: "Winnie-the-Pooh",
+    year: 1926,
   },
   {
     quote: "It always seems impossible until it's done.",
     source: "Nelson Mandela",
+    year: 2001,
   },
   {
     quote: "The mind is everything. What you think you become.",
@@ -50,10 +52,17 @@ let quotes = [
       "Don’t be afraid. Be focused. Be determined. Be hopeful. Be empowered.",
     source: "Michelle Obama",
   },
+  {
+    quote:
+      "Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.",
+    source: "Patrick McKenzie",
+    citation: "Twitter",
+    year: 2016,
+  },
 ];
 
 /***
- * `getRandomQuote` function
+ * `getRandomQuote` function to generate random number used to access index in array
  ***/
 function getRandomQuote() {
   let randomNumber = Math.floor(Math.random() * quotes.length);
@@ -61,7 +70,7 @@ function getRandomQuote() {
 }
 
 /***
- * `printQuote` function
+ * `printQuote` function to access properties in each object of array and display quote
  ***/
 function printQuote() {
   let randomQuote = getRandomQuote();
@@ -76,7 +85,6 @@ function printQuote() {
 }
 /***
  * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
  ***/
 
 document
