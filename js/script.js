@@ -53,7 +53,7 @@ let quotes = [
     quote:
       "Don’t be afraid. Be focused. Be determined. Be hopeful. Be empowered.",
     source: "Michelle Obama",
-    tags: "motivational #strongwomen",
+    tags: "#motivational #strongwomen",
   },
   {
     quote:
@@ -76,6 +76,8 @@ function getRandomQuote() {
 /***
  * `printQuote` function to access properties in each object of array and display quote and change background color
  ***/
+setInterval(printQuote, 10000);
+
 function printQuote() {
   let randomQuote = getRandomQuote();
   let html = `<p class="quote">${randomQuote.quote}</p><p class="source">${randomQuote.source}`;
@@ -112,7 +114,6 @@ function changeBackgroundColor() {
 /***
  * click event listener for the print quote button
  ***/
-
 document
   .getElementById("load-quote")
   .addEventListener("click", printQuote, false);
