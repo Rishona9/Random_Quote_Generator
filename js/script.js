@@ -81,13 +81,13 @@ setInterval(printQuote, 10000);
 function printQuote() {
   let randomQuote = getRandomQuote();
   let html = `<p class="quote">${randomQuote.quote}</p><p class="source">${randomQuote.source}`;
-  if (randomQuote.citation !== undefined) {
+  if (randomQuote.citation) {
     html += `<span class="citation">${randomQuote.citation}</span>`;
   }
-  if (randomQuote.year !== undefined) {
+  if (randomQuote.year) {
     html += `<span class="year">${randomQuote.year}</span>`;
   }
-  if (randomQuote.tags !== undefined) {
+  if (randomQuote.tags) {
     html += `<span class="tags">${randomQuote.tags}</span>`;
   }
 
