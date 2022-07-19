@@ -76,7 +76,6 @@ function getRandomQuote() {
 /***
  * `printQuote` function to access properties in each object of array and display quote and change background color
  ***/
-setInterval(printQuote, 10000);
 
 function printQuote() {
   let randomQuote = getRandomQuote();
